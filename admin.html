@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم - إدارة المنتجات</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <!-- نموذج تسجيل الدخول -->
+    <div class="login-container" id="loginForm">
+        <h2>تسجيل الدخول</h2>
+        <div class="form-group">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" id="username">
+        </div>
+        <div class="form-group">
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password">
+        </div>
+        <button class="btn" onclick="login()">دخول</button>
+    </div>
+
+    <!-- لوحة التحكم -->
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+        <h1>لوحة التحكم - إضافة منتج جديد</h1>
+        <button class="btn logout-btn" onclick="logout()">تسجيل الخروج</button>
+        
+        <form id="addProductForm" onsubmit="addProduct(event)">
+            <div class="form-group">
+                <label for="productName">اسم المنتج</label>
+                <input type="text" id="productName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="productPrice">السعر الجديد</label>
+                <input type="number" id="productPrice" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="oldPrice">السعر القديم</label>
+                <input type="number" id="oldPrice" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="imageUrl">رابط الصورة</label>
+                <input type="url" id="imageUrl" required 
+                       placeholder="https://example.com/image.jpg"
+                       onchange="previewImage(this.value)">
+            </div>
+            
+            <img id="imagePreview" class="preview-img" style="display: none;">
+            
+            <button type="submit" class="btn">إضافة المنتج</button>
+        </form>
+
+        <div class="products-list">
+            <h2>المنتجات الحالية</h2>
+            <div id="productsList"></div>
+        </div>
+    </div>
+
+    <script src="admin-script.js">
+       
+    </script>
+</body>
+</html>

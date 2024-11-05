@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأناقة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار المتجر">
+                <span>متجر الأناقة</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#products">المنتجات</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>أحدث صيحات الموضة</h1>
+            <p>اكتشف مجمعتنا المميزة م الملابس العصرية</p>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+
+        <div class="products-grid">
+
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social">
+                <h3>تواصل معنا</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-snapchat"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <p>جميع الحقوق حفوظة &copy; 2024 متجر الأناقة</p>
+        </div>
+    </footer>
+
+    <!-- نموذج الطلب -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-form">
+            <button class="close-btn" onclick="closeOrderForm()">&times;</button>
+            <h2>طلب المنتج</h2>
+            <p id="selectedProduct"></p>
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الجوال</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">عنوان التوصيل</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="size">المقاس</label>
+                    <select id="size" required>
+                        <option value="">اختر المقاس</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="spinner"></span>
+                    <span class="btn-text">تأكيد الطلب</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js">
+    
+    </script>
+</body>
+</html>
